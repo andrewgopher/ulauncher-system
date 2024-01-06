@@ -11,7 +11,7 @@
         "description": "Quit the session.",
         "icon": "system-log-out",
         "aliases": ["log out", "logout", "leave"],
-        "command": null
+        "command": "loginctl terminate-session `loginctl session-status | head -n 1 | awk '{print $1}'`"
     },
     "suspend": {
         "name": "Suspend",
